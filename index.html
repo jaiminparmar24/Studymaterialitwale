@@ -1,134 +1,297 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Primary SEO -->
+<title>Study Material By IT Wale Group</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Study Material by Itwale Group</title>
+<meta name="description" content="IT WALE Group is a trusted and exam-oriented IT study material website offering semester-wise assignments, GTU PYQs, and easy-to-understand IT notes for effective exam preparation.">
+
+<meta name="keywords" content="best IT study material website, IT WALE Group, GTU PYQs IT, IT assignments and notes, semester-wise IT study material, top IT notes website India">
+
+<meta name="author" content="IT WALE Group">
+<meta name="publisher" content="IT WALE Group">
+<meta name="copyright" content="IT WALE Group">
+
+<!-- Indexing Control -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Mobile & UX -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Language & Region -->
+<meta http-equiv="content-language" content="en-IN">
+
+<!-- Branding / Trust -->
+<meta name="theme-color" content="#4f46e5">
+<meta name="application-name" content="IT WALE Group">
+
+<!-- Open Graph (Social + Google Discover) -->
+<meta property="og:title" content="IT WALE Group – Best IT Study Material Website">
+<meta property="og:description" content="Semester-wise IT assignments, GTU PYQs, and exam-focused notes in simple language by IT WALE Group.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IT WALE Group">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IT WALE Group – Best IT Study Material Website">
+<meta name="twitter:description" content="Trusted IT study material platform with GTU PYQs, assignments, and notes for semester exams.">
+
+<!-- SEO Misc -->
+<link rel="canonical" href="https://studymaterialitwale.vercel.app">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+    --primary:#4f46e5;
+    --secondary:#6366f1;
+    --bg:#f4f6fb;
+    --card:#ffffff;
+    --text:#1f2937;
+}
 
 *{
-    margin:0;
-    padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background: linear-gradient(135deg,#1e3c72,#2a5298);
-    padding:20px;
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:var(--bg);
+    color:var(--text);
 }
 
-/* Main Card */
-.box{
-    width:100%;
-    max-width:380px;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(15px);
-    border-radius:20px;
-    padding:30px 20px;
+/* ===== HEADER ===== */
+header{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+    padding:50px 15px;
     text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-    animation: fadeIn 1s ease-in-out;
-    color:white;
 }
 
-/* Heading */
-.box h1{
-    font-size:22px;
-    margin-bottom:10px;
+header h1{
+    font-size:2.2rem;
+    margin:0;
 }
 
-.box p{
-    font-size:14px;
-    opacity:0.9;
+header p{
+    margin-top:10px;
+    font-size:1rem;
+    opacity:0.95;
+}
+
+/* ===== MAIN ===== */
+main{
+    max-width:1100px;
+    margin:-35px auto 40px;
+    padding:0 15px;
+}
+
+/* ===== SECTION ===== */
+.section{
+    background:rgba(255,255,255,0.95);
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
     margin-bottom:25px;
 }
 
-/* Button */
-button{
-    width:100%;
-    padding:14px;
-    font-size:16px;
-    border:none;
-    border-radius:12px;
-    cursor:pointer;
-    background: linear-gradient(45deg,#ffcc00,#ffaa00);
-    font-weight:bold;
+.section h2{
+    margin-top:0;
+    color:var(--primary);
+    font-size:1.4rem;
+}
+
+/* ===== GRID ===== */
+.subject-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+/* ===== CARD ===== */
+.subject-card{
+    background:var(--card);
+    border-radius:16px;
+    padding:22px;
+    box-shadow:0 12px 25px rgba(0,0,0,0.08);
+    position:relative;
     transition:0.3s;
 }
 
-button:active{
-    transform:scale(0.96);
+.subject-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
 }
 
-button:hover{
-    background: linear-gradient(45deg,#ffaa00,#ff8800);
+.subject-card h3{
+    margin:15px 0 8px;
+    font-size:1.1rem;
 }
 
-/* Prank Message */
-#prank{
-    display:none;
-    margin-top:20px;
-    font-size:16px;
-    color:#ffdddd;
-    animation: slideUp 0.6s ease forwards;
+.subject-card p{
+    font-size:0.9rem;
+    opacity:0.85;
 }
 
-/* Animations */
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+/* ===== BUTTON ===== */
+.btn{
+    display:block;
+    margin-top:15px;
+    padding:13px;
+    text-align:center;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:500;
+    transition:0.25s;
 }
 
-@keyframes slideUp{
-    from{opacity:0; transform:translateY(15px);}
-    to{opacity:1; transform:translateY(0);}
+.btn:active{
+    transform:scale(0.97);
 }
 
-/* Extra Mobile Optimization */
-@media(max-width:400px){
-    .box{
-        padding:25px 15px;
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:18px 10px;
+    font-size:13px;
+    background:#eef2ff;
+    color:#4b5563;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+    header h1{
+        font-size:1.8rem;
     }
-    .box h1{
-        font-size:18px;
+    .section{
+        padding:20px;
     }
 }
-
 </style>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<meta name="msvalidate.01" content="5415B08FCC9D95909C98A1DBD05C2AC2" />
 </head>
 
 <body>
 
-<div class="box">
-    <h1>📚 Ultimate Engineering Study Material</h1>
-    <p>Download 100% Sure Shot Exam Papers & Important Questions</p>
-    
-    <button onclick="showPrank()">Download Now</button>
+<header>
+   <h1>📘 IT WALE Group – Study Material Website</h1>
 
-    <div id="prank">
-        😈 Oyeeee! Study Material nahi milega!  
-        <br><br>
-        Pehle khud padhai karo 😎  
-        <br><br>
-        <strong>"Brain Not Found! Please Install Common Sense."</strong>
+   <p>
+Trusted & exam-oriented IT assignments, notes, and GTU study material –
+<strong>No.1 IT WALE Group</strong>
+</p>
+ <p style="margin-top:12px; font-size:14px; opacity:0.9;">
+       👇 Scroll down for all IT subjects & GTU PYQs
+   </p>
+
+</header>
+
+<main>
+<main>
+
+
+
+<div class="section">
+    <h2>📌 About This Website</h2>
+    <p>
+        This platform is developed by <b>IT WALE Group</b>, recognized as one of the
+<b>best IT study material websites</b> for semester-wise assignments, notes,
+and GTU exam preparation.
+
+<br><br>
+<p>✔ Simple & exam-focused content </p> 
+<p>✔ Subject-wise Google Drive PDFs  </p> 
+<p>✔ Regularly updated material </p> 
+<p>✔ Trusted by IT students</p>
+
+    </p>
+</div>
+<div class="section">
+    <h2>🏆 Why IT WALE Group is the Best?</h2>
+    <ul style="line-height:1.9; padding-left:18px;">
+        <li>📌 Best IT study material website for semester exams</li>
+        <li>📘 GTU PYQs, assignments & notes in one place</li>
+        <li>⚡ Simple language, fast access, no distractions</li>
+        <li>👨‍🎓 Trusted by IT students across semesters</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>📚 Available Material</h2>
+
+    
+
+        <div class="subject-card">
+            <h3>💾 GTU PYQ</h3>
+           
+            <a class="btn" href="https://drive.google.com/drive/folders/1rdMGpOUBpqPMN0QmmuMEwB0FzXXd3mA8?usp=drive_link" target="_blank">Open</a>
+        </div>
+    <div class="subject-grid">
+
+        <div class="subject-card">
+            <h3>💾 Computer Networks</h3>
+            <p>Sub. Code : BE04000271</p>
+            <a class="btn" href="https://drive.google.com/drive/folders/1coZa9AteyCagrbxUj7wj1UN2jCiUU6ji" target="_blank">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <h3>🖥 Computer Organization & Architecture</h3>
+            <p>Sub. Code : BE04000251</p>
+            <a class="btn" href="https://drive.google.com/drive/folders/1G2jnV56PR8rgbkz0Ob3mY2tJjerH4pRw" target="_blank">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <h3>📐 Discrete Mathematics</h3>
+            <p>Sub. Code : BE04000261</p>
+            <a class="btn" href="https://drive.google.com/drive/folders/11qKnBVpJQenHjB50VZVKhI0yBosdNc1d" target="_blank">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <h3>🧠 Object Oriented Programming</h3>
+            <p>Sub. Code : BE04000231</p>
+            <a class="btn" href="https://drive.google.com/drive/folders/1c-NZw8CYXYCpU4nWcm17QqAkppe-xp-8" target="_blank">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <h3>🖥 Operating Systems</h3>
+            <p>Sub. Code : BE04000221</p>
+            <a class="btn" href="https://drive.google.com/drive/folders/1Kj8TyKrBwGc7OUfS1PtezwBXwwPvqHiO" target="_blank">Open</a>
+        </div>
+
+        <div class="subject-card">
+            <h3>🌍 Environmental Science</h3>
+            <p>Sub. Code : BE04000101</p>
+            <a class="btn" href="https://drive.google.com/drive/folders/1WbGkGj6u0a8xedoQ9-6Qwo8tUtCzxiNh" target="_blank">Open</a>
+        </div>
+
     </div>
 </div>
 
-<script>
-function showPrank() {
-    document.getElementById("prank").style.display = "block";
-    setTimeout(() => {
-        alert("Server Crashed Due To Over Smart Students 😂");
-    }, 300);
-}
-</script>
+</main>
+
+<footer>
+  © 2026 IT WALE Group • Best IT Study Material Website • All Rights Reserved
+
+</footer>
 
 </body>
 </html>
+
+
 
