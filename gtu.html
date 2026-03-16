@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Study Materials</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* Background Animation */
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(-45deg,#667eea,#764ba2,#6dd5ed,#2193b0);
+background-size:400% 400%;
+animation:bgmove 12s infinite linear;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Glass Card */
+
+.container{
+
+backdrop-filter: blur(15px);
+background:rgba(255,255,255,0.15);
+border:1px solid rgba(255,255,255,0.3);
+
+padding:35px;
+border-radius:15px;
+
+width:380px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+text-align:center;
+
+animation:fadeIn 1s ease;
+
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h2{
+color:white;
+margin-bottom:20px;
+letter-spacing:1px;
+}
+
+.subject-list{
+list-style:none;
+}
+
+/* Buttons */
+
+.subject-item{
+margin:12px 0;
+}
+
+.subject-item a{
+
+text-decoration:none;
+display:block;
+
+padding:12px;
+
+border-radius:8px;
+
+color:white;
+
+font-weight:500;
+
+background:linear-gradient(135deg,#4285F4,#5a9cff);
+
+transition:0.3s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* Hover Animation */
+
+.subject-item a:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+
+}
+
+/* Shine effect */
+
+.subject-item a::before{
+
+content:'';
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.5),transparent);
+
+transition:0.5s;
+
+}
+
+.subject-item a:hover::before{
+left:100%;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>📚 PYQS (Important)</h2>
+
+<ul class="subject-list">
+
+<li class="subject-item">
+<a href="https://drive.google.com/drive/folders/14adgPTBAtz3zINkexsAi0Q20fFRdLUoD?usp=drive_link" target="_blank">CN</a>
+</li>
+
+<li class="subject-item">
+<a href="https://drive.google.com/drive/folders/1UkFsOIesA-FF9J9RFegWje_5_LAkTc6g?usp=drive_link" target="_blank">COA</a>
+</li>
+
+<li class="subject-item">
+<a href="https://drive.google.com/drive/folders/1sD0YQPB080lDAfpnc83mMS8zfHBZM5eK?usp=drive_link" target="_blank">DM</a>
+</li>
+
+<li class="subject-item">
+<a href="https://drive.google.com/drive/folders/1Dawd77smq9whL9GXo5G9fo4-XOFC-6VR?usp=drive_link" target="_blank">OOP</a>
+</li>
+
+<li class="subject-item">
+<a href="https://drive.google.com/drive/folders/1xVjBVC66pXo4bBxLlGp03YHhy2hZbGKG?usp=drive_link" target="_blank">OS</a>
+</li>
+
+<li class="subject-item">
+<a href="https://drive.google.com/drive/folders/1P528GnuU0TpNIY-YamXQHgg_pfxJXIXI?usp=drive_link" target="_blank">ES</a>
+</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>
